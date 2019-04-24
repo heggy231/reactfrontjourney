@@ -61,7 +61,10 @@ class App extends Component {
   //----------------Signup Method----------------
   handleSignUp = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/signup', 
+    axios.post('https://react-app-back-edit.herokuapp.com/user/signup', 
+
+    
+    // axios.post('http://localhost:3001/user/signup', 
 			{ email: this.state.email,
       	password: this.state.password }
 			)
@@ -87,7 +90,7 @@ class App extends Component {
 //----------------Login Method----------------
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/login', { //<-- save token to local storage
+    axios.post('https://react-app-back-edit.herokuapp.com/user/login', { //<-- save token to local storage
       email: this.state.email,
       password: this.state.password
     })
@@ -170,7 +173,7 @@ class App extends Component {
     onClick = (e) => {
       console.log('It worksss')
           e.preventDefault()
-          axios.get(`http://localhost:3001/api/cityposts`)
+          axios.get(`https://react-app-back-edit.herokuapp.com/api/cityposts`)
           .then(res =>{
               console.log(res.data)
               let postdata = res.data

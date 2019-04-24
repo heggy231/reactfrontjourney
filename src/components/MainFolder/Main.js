@@ -28,7 +28,7 @@ class Main extends Component{
 // //GEt Method to to obtain all of the posts--------------
   onAllClick= (e) => {
     e.preventDefault()
-    axios.get('http://localhost:3001/api/cityposts')
+    axios.get('https://react-app-back-edit.herokuapp.com/api/cityposts')
       .then(response => {
         // console.log(response.data)
         let postentry = response.data
@@ -58,7 +58,7 @@ onMyClick = (e) =>{
     var cityname = localStorage.userId
     console.log("-------")
     console.log(`${cityname}`)
-    axios.get(`http://localhost:3001/api/cityposts`)
+    axios.get(`https://react-app-back-edit.herokuapp.com/api/cityposts`)
     .then(res =>{
         // console.log(res.data)
         let postdata = res.data          
@@ -108,7 +108,7 @@ onClick = (e) =>{
     var cityname = `${e.target.innerHTML}`
     console.log("-------")
     console.log(`${cityname}`)
-    axios.get(`http://localhost:3001/api/cityposts`)
+    axios.get(`https://react-app-back-edit.herokuapp.com/api/cityposts`)
     .then(res =>{
         // console.log(res.data)
         let postdata = res.data          

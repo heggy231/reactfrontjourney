@@ -82,7 +82,7 @@ class AddPost extends Component {
       e.preventDefault()
       axios({
         method: 'post',
-        url: 'http://localhost:3001/api/cityposts',
+        url: 'https://react-app-back-edit.herokuapp.com/api/cityposts',
         data: { 
           city: this.state.city,
           title: this.state.title,

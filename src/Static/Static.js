@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const endPoint = 'http://localhost:3001/api/cityposts'
+const endPoint = 'https://react-app-back-edit.herokuapp.com/api/cityposts'
 
 
 class PostRequest {
